@@ -37,7 +37,7 @@ $(function(){
 	$("#check").on("click",function(){
 		if($("#userid").val()){
 			$.ajax({
-				url : "/member/check",
+				url : "/check",
 				type : "post",
 				data : {userId : $("#userid").val()},
 				dataType : "text",
