@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.kg.myapp.dao.UserRepository">
+<resultMap id="UserMap" type="com.kg.user.vo.UserVO">
+<result property="userId" column="userid"/>
+<result property="password" column="password"/>
+<result property="name" column="name"/>
+<result property="tel" column="tel"/>
+<result property="picture" column="picture"/>
+
+</resultMap>
+
+<insert id="joinUser" parameterType="com.kg.user.vo.UserVO">
+insert into emp_users values(#{userId}, #{password}, #{name}, #{tel}, #{picture})
+</insert>
+
+<select id="selectAllUser">
+select * from emp_users 
+</select>
+</mapper>
