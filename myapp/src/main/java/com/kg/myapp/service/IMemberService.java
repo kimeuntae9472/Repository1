@@ -7,5 +7,5 @@ public interface IMemberService {
 	void insertMember(MemberVO member);
 	String getPassword(String userid);
 	MemberVO getMember(String userid);
-	public int checkId(int userId);
+	public int checkId(String userId);
 }

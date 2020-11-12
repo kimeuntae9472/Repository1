@@ -45,7 +45,7 @@ public class MemberController {
 	
 	@PostMapping(value="/check")
 	@ResponseBody
-	public String checkId(int userId) {
+	public String checkId(String userId) {
 		return memberService.checkId(userId) == 0 ? "true" : null;
 	}
 }

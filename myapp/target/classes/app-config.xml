@@ -65,13 +65,20 @@ class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
 <aop:pointcut expression="execution(* com..*Service.*teEmp(..))" id="txPointcut"/>
 <aop:advisor advice-ref="txAdvice" pointcut-ref="txPointcut"/>
 </aop:config>
+
 <bean id="sqlSessionFactory"
 class="org.mybatis.spring.SqlSessionFactoryBean">
 <property name="dataSource" ref="dataSource" />
 <property name="mapperLocations" value="classpath:/com/kg/myapp/**/*.xml" />
 </bean>
 <mybatis-spring:scan base-package="com.kg.myapp.dao" />
+
 <bean id="bcryptPasswordEncoder"
 class="org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder"/>
 
+<bean id="jacksonMessageConverter" class="org.springframework.http.converter.json.MappingJackson2HttpMessageConverter"/>
+
+
+
 </beans>
+

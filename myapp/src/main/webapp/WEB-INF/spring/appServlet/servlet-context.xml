@@ -27,6 +27,7 @@
 		</beans:property>
 	</beans:bean>
 	<view-controller path="/login" view-name="login" />	
+	<view-controller path="/mock" view-name="mockjson" />	
 	<context:component-scan base-package="com.kg.myapp.controller" />
 	
 	

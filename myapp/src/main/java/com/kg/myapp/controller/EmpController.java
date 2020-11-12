@@ -1,6 +1,7 @@
 package com.kg.myapp.controller;
 
 import java.io.IOException;
+import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
@@ -163,6 +164,20 @@ public class EmpController {
 		return empService.idCheck(empId) == 0 ? "true" : null;
 	}
 
+	@RequestMapping(value="/emp/json/list")
+	public @ResponseBody List<EmpVO> getAllEmployees() {
+	List<EmpVO> empList = empService.getEmpList();
+	return empList;
+	}
+	
+	@RequestMapping(value="/emp/json/{employeeId}")
+	public @ResponseBody EmpVO getEmployees(@PathVariable int
+	employeeId) {
+	EmpVO emp = empService.getEmpInfo(employeeId);
+	return emp;
+	}
+	
+	
 }
 
 

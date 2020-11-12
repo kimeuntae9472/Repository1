@@ -19,7 +19,7 @@
 		select userid, password, name, tel, picture, picture_size as pictureSize 
 		from emp_users where userid=#{userid}
 	</select>
-	<select id="idCheck" parameterType="int" resultType="int">
-		select count(userid) from emp_users where userid=#{userId}
+	<select id="checkId" parameterType="String" resultType="int">
+		select count(*) from emp_users where userid=#{userId}
 	</select>
 </mapper>

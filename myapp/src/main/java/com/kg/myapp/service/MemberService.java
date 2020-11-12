@@ -33,7 +33,7 @@ public class MemberService implements IMemberService {
 	}
 
 	@Override
-	public int checkId(int userId) {
+	public int checkId(String userId) {
 		return memberRepository.checkId(userId);
 	}
 	
