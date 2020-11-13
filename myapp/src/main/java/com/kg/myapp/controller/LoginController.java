@@ -34,6 +34,11 @@ public class LoginController {
 		}
 	}
 	
+	@PostMapping(value="/logout.do")
+	public String logout(HttpSession session) {
+		session.invalidate();
+		return "redirect:/login";
+	}
 	
 	
 }

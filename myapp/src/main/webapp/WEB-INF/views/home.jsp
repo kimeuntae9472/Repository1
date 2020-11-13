@@ -23,5 +23,8 @@
 </form>
 <br>
 <a href="emp/list"><button>3. 사원 목록</button></a><br>
+<form action="/myapp/logout.do" method="post">
+<input type=submit value=4.로그아웃>
+</form><br>
 </body>
 </html>
